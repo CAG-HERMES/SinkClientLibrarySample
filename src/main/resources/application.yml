@@ -1,0 +1,21 @@
+## Optional, default value: 8082
+server:
+  port: 8082
+
+## Solace properties
+solace:
+  host: tcps:<broker-host>:<port> # e.g. tcps:localhost:55555
+  messageVpn: <vpn-name>
+  solaceAuthMode: BASIC
+  clientUsername: <username>
+  clientPassword: <password>
+
+## Sink Cascade properties
+sink:
+  patterns:
+    videoCascadeTopic: cctv/v1/src/cascade/cam/{cameraId}
+    videoChannelInfoRequestTopic: cctv/v1/src/info/cam/{cameraId}
+
+## cameraId
+cameraInfo:
+  cameraId: camera001 # multiple cameras not supported
